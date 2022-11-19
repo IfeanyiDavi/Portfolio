@@ -1,0 +1,11 @@
+.generalBtn{
+    border: none; 
+    border-radius: 15px;
+    width: 130px;
+    height: 35px;
+    color: white;
+    text-align: center;
+}
+.generalBtn:hover{
+    opacity: .7;
+}

@@ -1,0 +1,164 @@
+.secton_component{
+    background-color: white;
+    margin-bottom: 10px;
+    padding:0;
+    display: grid;
+    color: black;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.section_title{
+    font-size: 1.6em;
+    display: grid;
+    text-align: center;
+    margin-top: 10px;
+    color: gray;
+}
+.section_title >span:last-child{
+    font-size: .7em;
+    font-style: italic;
+}
+
+.secton_image-background{
+    
+    background-color: rgb(237, 234, 234);
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    align-items:center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+}
+.secton_image-background img{
+    width: 400px;
+    margin-top: 10px;
+    padding: 30px 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px gray;
+    justify-self: center
+}
+.secton_image-background img:hover{
+    box-shadow: -2px -2px 5px gray;
+}
+.section_gallery{
+    display: grid;
+    width: 80%;
+    margin: 0 auto;
+}
+.contact_span{
+    width: 250px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2em;
+    color: gray;
+
+}
+.section_portfolio_button{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    background-color: teal;
+    padding: 10px 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+.section_portfolio_button:hover .section_arr_btn{
+    animation: btnArr .5s forwards;
+    color: blueviolet;
+}
+.section_arr_btn{
+    display: flex;
+    justify-content: center;
+    width: 100px;
+}
+
+@keyframes btnArr {
+    0%{
+        justify-content: center;
+    }
+    100%{
+        justify-content: end;
+    }
+}
+
+
+/* Aside Css */
+.aside{
+    background:linear-gradient(45deg, blueviolet 35%, rgb(141, 47, 229, 0.8) 40%);
+    display: grid;
+    gap: 20px;
+    text-align: center;
+    padding: 20px 20px;
+    justify-content: center;
+}
+.aside_title{
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+.box_component{
+    display: flex;
+    gap:20px;
+}
+.asideBox{
+    display: grid;
+    box-shadow: 2px 2px 5px gray;
+    gap: 20px;
+    background-color: white;
+    border-radius: 25px;
+    width: 300px;
+    justify-content: center;
+    padding: 4px 4px;
+    height: auto;
+}
+.asideBox span:first-child{
+    font-weight: 900;
+}
+.asideBox.second{
+    background: linear-gradient(-10deg, white 70%,blueviolet 70%);
+    position: relative;
+}
+.asideBox.second::after{
+    content: "";
+    background:linear-gradient(109deg, rgb(138, 43, 226,0.5) 30%, rgb(255, 255, 255, 0) 30%);
+    width: 100px;
+    height: 200px;
+    top: 0;
+    position: absolute;
+    border-top-left-radius: 25px;
+}
+.asideBox.last{
+    background: linear-gradient(-10deg, white 70%,rgb(226, 223, 43) 70%);
+    position: relative;
+}
+.asideBox.last::after{
+    content: "";
+    background:linear-gradient(126deg, rgb(226, 223, 43,0.5) 60%, rgb(255, 255, 255, 0) 30%);
+
+    width: 100px;
+    height: 200px;
+    top: 0;
+    position: absolute;
+    border-top-left-radius: 25px;
+}
+
+.asideBoxList{
+    display: grid;
+    color: gray;
+    font-size: .8em;
+    font-weight: 900;
+    font-family:Arial, Helvetica, sans-serif;
+}
+@media screen and (max-Width:780px){
+    .secton_image-background{
+        all: unset;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        transition:grid 1s linear;
+    }
+    .box_component{
+        display: grid;
+        gap:20px;
+    }
+}

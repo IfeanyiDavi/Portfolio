@@ -1,0 +1,120 @@
+.header_component{
+    display: flex;
+    color:gray ;
+    background-color: rgb(237, 234, 234, 0.5);
+    justify-content: space-between;
+    padding: 0 10px;
+    font-weight: 900;
+    height: 60px;
+}
+.logo{
+    color: red;
+    text-shadow: gray 2px 2px;
+    border-top: 2px gray solid;border-radius: 50%;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+}
+.logoA{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.15em;
+}
+.logoI{
+    font-family:'Courier New', Courier, monospace;
+}
+.desktopResponsive{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    list-style: none;
+    height: 100%;
+}
+.desktopResponsive li{
+    height: 100%;
+}
+
+.desktopResponsive li a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: inherit;
+    justify-content: space-around;
+    font-size: .8em;
+}
+.desktopResponsive li a:hover {
+    transition: .3s linear;
+    border-bottom: 4px solid green;
+    color: green;
+}
+.header_menu:hover{
+    animation: menu linear 0.9s;
+}
+
+.mobile_menu{
+    display: none;
+    color: white;
+    cursor: pointer;
+}
+.header_component .mobileResponsive{
+    display: none;
+}
+.mobileInvicible{
+    visibility: hidden;
+    position: absolute;
+    opacity: 0;
+}
+
+@media screen and (max-Width:780px){
+    .header_component{
+        position: relative;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2px;
+    }
+    .header_component .mobileResponsive{
+        display:grid;
+        padding: 0;
+        width: 250px;
+        list-style: none;
+        position:absolute;
+        background-color: rgb(237, 234, 234, 0.8);
+        right: 0;
+        font-size: .9em;
+        transition: opacity .4s ;
+        opacity: 1;
+        right: 0;
+        top: 59px;
+        border-left: solid 10px gray;
+    }
+    
+    .mobileResponsive li{
+        display: flex;
+        justify-content: flex-start;
+        padding: 20px 10px;
+        width: 100%;
+        cursor: pointer;
+    }
+    .mobileResponsive li a{
+        text-decoration: none;
+        color: inherit;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: bold;
+    }
+    .mobileResponsive li:hover{
+        background-color: gray;
+        color: white;
+    }
+    .desktopResponsive{
+        display: none;
+    }
+    .header_component .mobile_menu{
+        background-color: gray;
+        font-size: 2.5em;
+        padding: 4px 4px;
+        display: flex;
+    }
+
+}

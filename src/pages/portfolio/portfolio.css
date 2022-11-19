@@ -1,0 +1,40 @@
+.portfolio_website{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    height: 80vh;
+}
+.portfolio_website >.portflio_gallery{
+    display: grid;
+    margin: 0 auto;
+    width: 250px;
+    border: 1px solid gray;
+    gap: 10px;
+    margin-top: 20px; 
+    border-radius: 5px;
+    height: 230px;
+}
+.portflio_gallery img{
+    width: 100%;
+    border-radius: 5px;
+}
+.portfolio_button{
+    justify-self: center;
+    background-color:teal;
+    width: 150px;
+    border-radius: 4px;
+    border: none;
+    height: 40px;
+    color: white; 
+    margin-bottom: 2px;
+}
+.portfolio_button:hover{
+    opacity: 0.7;
+}
+
+@media screen and (max-Width:780px){
+    .portfolio_website{
+        all: unset;
+        display: grid;
+    }
+}

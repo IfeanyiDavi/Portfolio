@@ -1,0 +1,12 @@
+.home_component{
+    display: grid;
+    width: 100%;
+    margin: 10px auto;
+}
+ .home_component .sticky{
+    position: sticky;
+    top:0px;
+    background-color: white;
+    z-index: 1000;
+    box-shadow: 2px 5px 10px rgb(62, 59, 59);
+}

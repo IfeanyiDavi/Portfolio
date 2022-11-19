@@ -1,0 +1,119 @@
+.footer{
+    margin-top: 30px;
+    border-top: 1px solid gray;
+}
+.footer form{
+    display:flex;
+    width: 100%;
+    justify-content: center;
+}
+.form_component{
+    display: grid;
+    gap: 10px;
+    text-align: center;
+    width: 90%;
+}
+.form_title{
+    color: gray;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+.section_form{
+    display: grid;
+    width:500px;
+    margin: 0 auto;
+    gap: 10px;
+}
+.section_form >div{
+    display: grid;
+}
+.section_form >div label{
+    justify-self: flex-start;
+    color: gray;
+}
+.section_form >div input[type="email"], textarea, .select{
+    border: 1px solid gray;
+    outline:none;
+    appearance: none;
+    border-radius: 2px;
+    font-size: .75em;
+}
+.section_form >div input[type="email"]{
+    height: 40px;
+    padding: 2px 4px;
+}
+.section_form >div input[type="email"]:focus{
+    border: teal 2px solid;
+}
+.section_form >div textarea:focus{
+    border: teal 2px solid;
+}
+.section_form >div .select:focus{
+    border: teal 2px solid;
+}
+.section_form >div textarea{
+    height: 70px;
+    padding: 2px 4px;
+    resize: none;
+}
+.select{
+    padding: 2px 4px;
+}
+.section_form  input[type="submit"]{
+    height: 40px;
+    padding: 2px;
+    border: none;
+    border-radius: 2px;
+    color: white;
+    background-color: teal;
+}
+.mainFooter{
+    display: grid;
+    margin-top: 20px;
+    background-color: rgb(42, 59, 78);
+    height: 30vh;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+.mainFooter ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    justify-content: center;
+    gap: 100px;
+}
+.mainFooter ul li{
+    padding: 4px 8px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.mainFooter ul >li:first-child{
+    background-color: darkblue;
+}
+.mainFooter ul >li:nth-child(2){
+    background-color: rgb(81, 81, 235);
+}
+.mainFooter ul >li:last-child{
+    background-color: purple;
+}
+.mainFooter ul li:hover{
+    background-color: teal;
+}
+.mainFooter span{
+    justify-self: center;
+    font-size: .8em;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+@media screen and (max-Width:780px){
+    .secton_image-background{
+        display: grid;
+        gap: 20px;
+        transition:grid 1s linear;
+    }
+    .section_form{
+        width:100%;
+    }
+}

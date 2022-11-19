@@ -1,0 +1,105 @@
+.about_container{
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+.about_container::after{
+    display: block;
+    content:" </davis>\A</html> " ;
+    white-space: pre;
+    font-size: .9em;
+    color: grey;
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+.progress_body{
+    display: grid;
+    gap: 20px;
+    background-color: rgb(237, 231, 231);
+}
+.about_progress{
+    display: grid;
+    align-items: center;
+    padding: 10px 10px;
+
+}
+.about_progress >span{
+    width: 100%;
+    height: 3px;
+    display: flex;
+    background-color: pink;
+}
+
+.about_progress .about1{
+    background-color: green;
+    width: 100%;
+    border-radius: 5px;
+    animation: transitSkill  3s linear;
+}
+.about2{
+    background-color:green;
+    width: 100%;
+    border-radius: 5px;
+    animation: transitSkill  3s linear;
+}
+.about_progress .about3{
+    background-color:blue;
+    border-radius: 5px;
+    width: 90%;
+    animation: transitSkill  2.5s linear;
+}
+.about4{
+    background-color:chartreuse;
+    width: 70%;
+    border-radius: 5px;
+    animation: transitSkill  2s linear;
+}
+.about5{
+    background-color:green;
+    width: 100%;
+    border-radius: 5px;
+    animation: transitSkill  3s linear;
+}
+.about6{
+    background-color: chartreuse;
+    width: 70%;
+    border-radius: 5px;
+    animation: transitSkill  2s linear;
+}
+.about7{
+    background-color:red;
+    width: 60%;
+    border-radius: 5px;
+    animation: transitSkill  1.5s linear;
+}
+@keyframes transitSkill{
+    0%{
+        width: 0;
+    }
+}
+
+@media screen and (max-Width:780px){
+    .about_container{
+        all: unset;
+        display: grid;
+        margin-top: 20px;
+
+    }
+    .progress_body{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .about_container::before{
+        display: block;
+        content:"<!doctype> \A <html> \A <davis>" ;
+        white-space: pre;
+        font-size: .9em;
+        color: grey;
+        font-style: italic;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    }
+    
+}
