@@ -23,7 +23,10 @@ function Header(){
     return(
         <div className={`${sticky?"sticky":""}`} style={{display:"grid"}}>
             <div className="header_component">
-            <label className="logo">D<span className="logoA">a</span>v<span className="logoI">i</span>s</label>
+            <div className="logo_hire_me">
+                <label className="logo">D<span className="logoA">a</span>v<span className="logoI">i</span>s</label>
+                <span className="hire_me">Hire Me</span>
+            </div>
             <div  className="mobile_menu">{!hide?<AiOutlineMenu onClick={()=>setHide(!hide)}/>:<GiCancel onClick={()=>setHide(!hide)}/>}</div>
             <ul className="desktopResponsive">
                 <li><Link to={"/"}>Home</Link></li>

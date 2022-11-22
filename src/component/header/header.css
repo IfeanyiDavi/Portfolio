@@ -52,6 +52,23 @@
 .header_menu:hover{
     animation: menu linear 0.9s;
 }
+.logo_hire_me{
+    display: flex;
+    align-items: center;
+    width: 200px;
+    justify-content: space-between;
+}
+
+.hire_me{
+    padding: 4px 4px;
+     box-shadow: inset 2px 2px 5px rgba(250, 6, 6, 0.5),
+     -2px 2px 2px rgba(250, 6, 6, 0.5);
+   cursor: pointer;
+   transition: all .9s;
+}
+.hire_me:hover{
+    padding: 5px 5px;
+}
 
 .mobile_menu{
     display: none;
@@ -62,7 +79,7 @@
     display: none;
 }
 .mobileInvicible{
-    visibility: hidden;
+    visibility: hidden; 
     position: absolute;
     opacity: 0;
 }

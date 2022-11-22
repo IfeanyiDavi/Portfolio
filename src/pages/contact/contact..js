@@ -1,11 +1,29 @@
+import React, {useState, useContext} from "react";
 import Header from "../../component/header/header";
-import Footer from "../../component/footer/footer";
 import MainFooter from "../../component/footer/mainFooter";
-
 import image from "../../public/images1.jpg";
-import "./contact.css";
 import RadioBtn from "../../util/radiobtt";
+
+import { ContactData } from "../../context/context";
+import "./contact.css";
+
 function Contact(){
+
+    const [enquire, setEnquire] = useState({
+        emailEnquire : "",
+        messageEnquire  : ""
+    });
+
+    const {contact, setContact} = useContext(ContactData);
+
+    const EnquireEvent = e=>{
+        setEnquire({...enquire, [e.target.name]:e.target.value});
+        console.log(enquire)
+    }
+    const contactEvent = e =>{
+
+    }
+
     return(
         <div className="home_component">
             <Header/>
@@ -22,15 +40,15 @@ function Contact(){
 
                 <div className="form_componenet">
                     <div className="enquiring_label">
-                        <span>Enquiring OR Contact us for work Project?</span>
+                        <span>Enquiring or Contact us for work Project?</span>
                     </div>
                     <div className="form_info">
                         <label>Email</label>
-                        <input type={"email"}/>
+                        <input type={"email"} name="emailEnquire" value={enquire.emailEnquire} onChange={EnquireEvent}/>
                     </div>
                     <div className="form_info">
                         <label>Message</label>
-                        <textarea />
+                        <textarea value={enquire.messageEnquire} name="messageEnquire" onChange={EnquireEvent}/>
                     </div>
                     <button>Enquire</button>
                 
@@ -39,7 +57,7 @@ function Contact(){
                         <label className="form_title">OR</label>
                             <div className="form_info">
                                     <label>Email</label>
-                                    <input type={"email"}/>
+                                    <input type={"email"} value={contact.email} onChange={contactEvent}/>
                             </div>
                             <div className="form_info">
                                 <label>Plan</label>

@@ -1,9 +1,10 @@
-
-
+import React from "react";
 import Header from "../../component/header/header";
-import MainFooter from "../../component/footer/mainFooter"
+import MainFooter from "../../component/footer/mainFooter";
 import "./about.css";
+
 function About(){
+
     return(
         <div className="home_component">
             <Header/>
