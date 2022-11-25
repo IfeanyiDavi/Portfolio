@@ -27,32 +27,80 @@
 }
 .section_form >div{
     display: grid;
-}
-.section_form >div label{
-    justify-self: flex-start;
     color: gray;
 }
-.section_form >div input[type="email"], textarea, .select{
+.plan.inputs{
+    position: relative;
+    margin-bottom: 60px;
+    margin-top: 20px;
+}
+.form_input{
+    position: absolute;
+    width: 100%;
+    top:0;
+    left:0;
+    height: 40px;
+    padding: 2px 4px;
+}
+.form_label{
+    position: absolute;
+    top:8px;
+    left: 10px;
+    background-color: white;
+    cursor: text;
+    padding: 0 4px;
+    transition: top .1s;
+}
+
+.form_input:focus ~ .form_label, .form_input:not(:placeholder-shown):not(:focus)  ~ .form_label{
+    top:-10px;
+    font-size: .75em;
+    color:teal;
+    font-weight: 900;
+}
+.message.inputs{
+    position: relative;
+    margin:20px 0;
+}
+.form_message{
+    position: absolute;
+    width: 100%;
+    top:0;
+    left:0;
+}
+.form_label_m{
+    position: absolute;
+    top:18px;
+    left: 10px;
+    background-color: white;
+    cursor: text;
+    padding: 0 4px;
+    transition: top .1s;
+}
+.form_message:focus ~ .form_label_m, .form_message:not(:placeholder-shown):not(:focus) ~.form_label_m{
+    top:-10px;
+    font-size: .75em;
+    color:teal;
+    font-weight: 900;
+}
+.section_form >div .form_input, .form_message, .select{
     border: 1px solid gray;
     outline:none;
     appearance: none;
     border-radius: 2px;
     font-size: .75em;
+    color: gray;
 }
-.section_form >div input[type="email"]{
-    height: 40px;
-    padding: 2px 4px;
-}
-.section_form >div input[type="email"]:focus{
+.section_form .form_input:focus{
     border: teal 2px solid;
 }
-.section_form >div textarea:focus{
+.section_form .form_message:focus{
     border: teal 2px solid;
 }
 .section_form >div .select:focus{
     border: teal 2px solid;
 }
-.section_form >div textarea{
+.section_form .form_message{
     height: 70px;
     padding: 2px 4px;
     resize: none;
@@ -60,14 +108,18 @@
 .select{
     padding: 2px 4px;
 }
-.section_form  input[type="submit"]{
+.section_form  .form_submit{
     height: 40px;
     padding: 2px;
     border: none;
     border-radius: 2px;
     color: white;
     background-color: teal;
+    margin-bottom: 20px;
+    margin-top: 60px;
 }
+
+
 .mainFooter{
     display: grid;
     margin-top: 20px;

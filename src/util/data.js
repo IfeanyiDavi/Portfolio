@@ -1,8 +1,7 @@
 
 
-export const Basic = ["Website Audit", "Design", "Development"]
+export const Basic = ["Personal blog", "Business Website", "Brochure Website","Landing Page","Hosting"]
               
-export const Standard = ["Website Audit", "Design", "Development"]
+export const Standard = ["Business Website", "Portfolio Website","Wiki/databse", "Hosting"]
  
-export const Premium = 
-["Website Audit", "Design", "Development", "Backups","Live Chat", "eCommerce", "Hosting"] 
+export const Premium = ["Business Website", "Portfolio Website", "Forum Website", "eCommerce", "Hosting"] 

@@ -9,19 +9,19 @@ function Footer(){
                 <div className="form_component">
                     <label className="form_title">Contact Us</label>
                     <div className="section_form">
-                       <div className="plan">
-                            <label>Email</label>
-                            <input type={"email"}/>
+                       <div className="plan inputs">
+                            <input type={"email"} className="form_input" id="email" placeholder=" "/>
+                            <label className="form_label" htmlFor="email">Email</label>
+
                        </div>
                         <div className="plan">
-                            <label>Plan</label>
                            <RadioBtn/>
                         </div>
-                        <div className="message">
-                            <label>Message</label>
-                            <textarea />
+                        <div className="message inputs">
+                            <textarea className="form_message" id="message" placeholder=" "/>
+                            <label className="form_label_m" htmlFor="message">Message</label>
                         </div>
-                        <input type={"submit"} value="Submit"/>
+                        <input type={"submit"} value="Submit" className="form_submit"/>
                     </div>
                 </div>
                

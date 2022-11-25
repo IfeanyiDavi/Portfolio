@@ -1,4 +1,5 @@
-import React, {useState, useContext} from "react";
+import React, {useState, useContext, useEffect} from "react";
+import $ from "jquery";
 import Header from "../../component/header/header";
 import MainFooter from "../../component/footer/mainFooter";
 import image from "../../public/images1.jpg";
@@ -18,11 +19,14 @@ function Contact(){
 
     const EnquireEvent = e=>{
         setEnquire({...enquire, [e.target.name]:e.target.value});
-        console.log(enquire)
     }
     const contactEvent = e =>{
-
+        setContact({...contact, [e.target.name]:e.target.value });
     }
+
+    useEffect(()=>{
+        $(window).scrollTop(0);
+    },[]);
 
     return(
         <div className="home_component">
@@ -57,7 +61,7 @@ function Contact(){
                         <label className="form_title">OR</label>
                             <div className="form_info">
                                     <label>Email</label>
-                                    <input type={"email"} value={contact.email} onChange={contactEvent}/>
+                                    <input type={"email"} value={contact.email} onChange={contactEvent} name="email"/>
                             </div>
                             <div className="form_info">
                                 <label>Plan</label>
@@ -65,7 +69,7 @@ function Contact(){
                             </div>
                             <div className="form_info">
                                 <label>Message</label>
-                                <textarea />
+                                <textarea value={contact.message} onChange={contactEvent} name="message"/>
                             </div>
                             <button>Submit</button>
                     </div>

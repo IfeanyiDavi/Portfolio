@@ -1,6 +1,5 @@
 .home_component{
     display: grid;
-    width: 100%;
     margin: 10px auto;
 }
  .home_component .sticky{

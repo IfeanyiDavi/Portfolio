@@ -1,9 +1,16 @@
+import React, {useEffect} from "react";
 import Header from "../../component/header/header";
-import Button_ from "../../component/button/button";
+import $ from "jquery";
 import Image from "../../public/images.jpg";
 import "./portfolio.css";
 import MainFooter from "../../component/footer/mainFooter";
+
 function Portfolio(){
+
+    useEffect(()=>{
+        $(window).scrollTop(0);
+    },[]);
+
     return(
         <div className="home_component">
             <Header/>

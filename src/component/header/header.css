@@ -10,10 +10,12 @@
 .logo{
     color: red;
     text-shadow: gray 2px 2px;
-    border-top: 2px gray solid;border-radius: 50%;
+    border-top: 2px gray solid;
+    border-radius: 50%;
     display: flex;
     justify-self: center;
     align-self: center;
+    margin-left: 10px;
 }
 .logoA{
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -21,6 +23,15 @@
 }
 .logoI{
     font-family:'Courier New', Courier, monospace;
+}
+.progressor{
+    height: 4px;
+    width: 100%;
+    display: flex;
+}
+.progressor span{
+    background-color:teal;
+    height: auto;
 }
 .desktopResponsive{
     display: flex;
@@ -52,24 +63,6 @@
 .header_menu:hover{
     animation: menu linear 0.9s;
 }
-.logo_hire_me{
-    display: flex;
-    align-items: center;
-    width: 200px;
-    justify-content: space-between;
-}
-
-.hire_me{
-    padding: 4px 4px;
-     box-shadow: inset 2px 2px 5px rgba(250, 6, 6, 0.5),
-     -2px 2px 2px rgba(250, 6, 6, 0.5);
-   cursor: pointer;
-   transition: all .9s;
-}
-.hire_me:hover{
-    padding: 5px 5px;
-}
-
 .mobile_menu{
     display: none;
     color: white;
@@ -97,14 +90,14 @@
         width: 250px;
         list-style: none;
         position:absolute;
-        background-color: rgb(237, 234, 234, 0.8);
+        background-color: rgb(237, 234, 234, 0.9);
         right: 0;
         font-size: .9em;
         transition: opacity .4s ;
         opacity: 1;
         right: 0;
-        top: 59px;
-        border-left: solid 10px gray;
+        top: 60px;
+        box-shadow: inset 2px 2px 2px  rgb(237, 234, 234), 2px 2px 2px lightsteelblue, -2px -2px 2px lightsteelblue;
     }
     
     .mobileResponsive li{
@@ -121,7 +114,7 @@
         font-weight: bold;
     }
     .mobileResponsive li:hover{
-        background-color: gray;
+        background-color: lightsteelblue;
         color: white;
     }
     .desktopResponsive{

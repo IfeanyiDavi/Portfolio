@@ -1,21 +1,27 @@
-import React from "react";
+import React, {useEffect} from "react";
+import $ from "jquery";
 import Header from "../../component/header/header";
 import MainFooter from "../../component/footer/mainFooter";
+import About_pix from "../../public/spring.jpg";
 import "./about.css";
 
 function About(){
+    
+    useEffect(()=>{
+        $(window).scrollTop(0);
+    },[]);
 
     return(
         <div className="home_component">
             <Header/>
             
             <div className="about_container">
-                <div>
-                    <span>Image</span>
+                <div className="about_me">
+                    <img src={About_pix}/>
                     <p>I spent 5years working both as a freelance web developer
                         and designer. I have worked on several of web projects
                         for range of clients providing web design and Development(
-                            CSS,JS, jQUERY,Bootstrap, REACT JS, NODE JS and MONGODB
+                            CSS, SASS, JS, jQUERY,Bootstrap, REACT JS, NODE JS and MONGODB
                         ).<br></br> I have created successful responsive websites that are fast, easy to use, and built with best pratices. 
                         The main area of my specialization is front-end development 
                         building small and medium web apps, animations, and coding interative layouts.
@@ -24,7 +30,7 @@ function About(){
                 </div>
                 <div className="progress_body">
                     <div className="about_progress">
-                        <label>CSS</label>
+                        <label>CSS AND SASS</label>
                         <span><span className="about1"></span></span>
                     </div>
                     <div className="about_progress">

@@ -2,9 +2,10 @@
     padding: 0;
     margin: 0;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
     margin-top: 20px;
+    width: 100%;
 }
 .about_container::after{
     display: block;
@@ -15,10 +16,27 @@
     font-style: italic;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
+.about_me{
+    width: 100%;
+    display: grid;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 2px 2px 5px lightsteelblue,inset -2px -2px 5px lightsteelblue;
+    padding:10px 10px;
+    color: gray;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.about_me img{
+    width:100%;
+}
 .progress_body{
     display: grid;
     gap: 20px;
     background-color: rgb(237, 231, 231);
+    font-family:'Courier New', Courier, monospace;
+    color: gray;
+    font-weight: bold;
 }
 .about_progress{
     display: grid;
@@ -89,8 +107,9 @@
 
     }
     .progress_body{
-        width: 80%;
+        width: 100%;
         margin: 0 auto;
+        padding: 5px 20px;
     }
     .about_container::before{
         display: block;
@@ -100,6 +119,9 @@
         color: grey;
         font-style: italic;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    }
+    .about_me{
+        margin-bottom: 20px;
     }
     
 }

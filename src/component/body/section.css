@@ -19,7 +19,6 @@
 }
 
 .secton_image-background{
-    
     background-color: rgb(237, 234, 234);
     margin-top: 20px;
     display: grid;
@@ -34,7 +33,8 @@
     padding: 30px 10px;
     border-radius: 10px;
     box-shadow: 2px 2px 5px gray;
-    justify-self: center
+    justify-self: center;
+    margin-bottom: 10px;
 }
 .secton_image-background img:hover{
     box-shadow: -2px -2px 5px gray;
@@ -102,7 +102,7 @@
 }
 .asideBox{
     display: grid;
-    box-shadow: 2px 2px 5px gray;
+    box-shadow: inset 2px 2px 15px rgb(128, 128, 128, 0.5), inset -2px -2px 15px rgb(128, 128, 128,0.5);
     gap: 20px;
     background-color: white;
     border-radius: 25px;
@@ -111,8 +111,10 @@
     padding: 4px 4px;
     height: auto;
 }
-.asideBox span:first-child{
+.asideBox >span:first-child{
     font-weight: 900;
+    color: rgb(162, 11, 11);
+    font-size: 1.2em;
 }
 .asideBox.second{
     background: linear-gradient(-10deg, white 70%,blueviolet 70%);
@@ -133,7 +135,7 @@
 }
 .asideBox.last::after{
     content: "";
-    background:linear-gradient(126deg, rgb(226, 223, 43,0.5) 60%, rgb(255, 255, 255, 0) 30%);
+    background:linear-gradient(135deg, rgb(226, 223, 43,0.5) 50%, rgb(255, 255, 255, 0) 30%);
 
     width: 100px;
     height: 200px;
@@ -145,10 +147,42 @@
 .asideBoxList{
     display: grid;
     color: gray;
-    font-size: .8em;
+    font-size: .99em;
     font-weight: 900;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
+    
 }
+
+
+/* Aside2 Css */
+.aside2{
+    display: flex;
+    margin: 10px 80px;
+    background-color: rgba(204, 195, 195, 0.2);
+    border-radius: 100% 0% 0% 100%/ 100% 0% 100% 0%;
+}
+.aside2_divider{
+    border-left: 6px dashed rgb(0, 128, 128, 0.5);
+}
+.aside2_sub{
+    display: grid;
+    gap: 20px;
+    padding: 20px 20px;
+}
+.aside2 >div span{
+    font-weight: bolder;
+    font-size: 1.5em;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.aside2 >div p{
+    color: gray;
+    z-index: 10000;
+
+}
+
+
+
+
 @media screen and (max-Width:780px){
     .secton_image-background{
         all: unset;
@@ -156,6 +190,7 @@
         flex-direction: column;
         gap: 20px;
         transition:grid 1s linear;
+        align-items: center;
     }
     .box_component{
         display: grid;
